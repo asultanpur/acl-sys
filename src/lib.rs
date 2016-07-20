@@ -70,6 +70,8 @@ extern "C" {
     pub fn acl_get_permset(entry: acl_entry_t, permset: *mut acl_permset_t) -> c_int;
     pub fn acl_set_permset(entry: acl_entry_t, permset: acl_permset_t) -> c_int;
 
+    pub fn acl_get_perm(permset_d: acl_permset_t, perm: acl_perm_t) -> c_int;
+
     /* Manipulate ACL entry tag type and qualifier */
 
     pub fn acl_get_qualifier(entry: acl_entry_t) -> *mut c_void;
